@@ -20,9 +20,10 @@ GameCube console or a GameCube-to-USB adapter from a PC.
 | `build.sh` | Build / flash helper (see [Build & flash](#build--flash)). |
 | `gc_button_test.py` | Host tool that cycles through all 12 buttons (or a single one) for testing in Dolphin/console. |
 | `gc_diag.py` | Diagnostic driver: sends a press/release pattern and, when `ENABLE_DEBUG` is on, prints the firmware's counters. |
-| `gc-a-press/` | Minimal test sketch: repeatedly presses A with no serial input. |
-| `gc-debug/` | Dev-only sketch that logs the adapter's command sequence (superseded; kept as reference). |
-| `gc-readcommand/` | Test sketch for the single-pass GameCube command reader. |
+| `sketches/` | Additional Arduino sketches (test/dev), each in its own folder. |
+| `sketches/gc-a-press/` | Minimal test sketch: repeatedly presses A with no serial input. |
+| `sketches/gc-debug/` | Dev-only sketch that logs the adapter's command sequence (superseded; kept as reference). |
+| `sketches/gc-readcommand/` | Test sketch for the single-pass GameCube command reader. |
 | `AGENTS.md` | Detailed build/wiring/troubleshooting notes for contributors. |
 
 ## Hardware wiring
