@@ -1,0 +1,25 @@
+# --- avr-gcc / arduino-cli build output -------------------------------
+*.i
+*.ii
+*.s
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+/build/
+/tmp/
+
+# --- Python -----------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+
+# --- Editors / OS -----------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
