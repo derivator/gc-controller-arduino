@@ -28,6 +28,26 @@ GameCube console or a GameCube-to-USB adapter from a PC.
 
 ## Hardware wiring
 
+> # ⚠️⚠️⚠️ WARNING — RISK OF PERMANENT CONSOLE DAMAGE ⚠️⚠️⚠️
+>
+> This project wires an Arduino directly to a **real GameCube console / controller
+> port**. Getting the wiring wrong — especially **swapping the red DATA (3.3V) and
+> blue 3.3V supply lines**, or connecting the data line **without a bidirectional
+> 3.3V/5V logic-level converter** — can **permanently damage the console's
+> controller port, the console, and/or the Arduino**.
+>
+> - **Verify every wire with a multimeter before powering anything on.** The
+>   cable colours vary by manufacturer; do **not** trust them.
+> - **Do not** connect the Arduino data pin directly to the console. The library
+>   actively drives the line to 5V, but the GameCube port uses 3.3V logic — a
+>   level shifter (e.g. BSS138) is mandatory.
+> - **You proceed entirely at your own risk.**
+>
+> **The authors and contributors provide this project AS-IS, with no warranty of
+> any kind, and accept NO liability whatsoever** for any damage to hardware,
+> consoles, adapters, or anything else arising from its use or misuse. You are
+> solely responsible for what you connect and how.
+
 The Arduino acts as a GameCube **controller** plugged into a console. The
 GameCube protocol runs at **3.3V logic**, but the NicoHood library's
 `gc_n64_send()` **actively drives the data line HIGH to the AVR supply (5V)**, not
